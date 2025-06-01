@@ -1,13 +1,11 @@
 // CryptoBot/Program.cs
 using CryptoBot.Services.Features.Crypto;
-using TuProyecto.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Registrar servicios
 builder.Services.AddScoped<CaesarCipherService>();
 builder.Services.AddControllers();
-builder.Services.AddScoped<ICesarService, CesarService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
