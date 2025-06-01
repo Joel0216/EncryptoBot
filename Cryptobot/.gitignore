@@ -1,0 +1,70 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.generated.cs
+
+# VS Code files
+.vscode/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Microsoft Visual Studio cache files
+.vs/
+
+# ASP.NET specific
+wwwroot/lib/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Entity Framework Core Migrations (optional - if generated files are sensitive or temporary)
+# Migrations/
+
+# Rider IDE files
+.idea/
+
+# DotCover
+*.dcvr
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+
+# Logs
+*.log
+
+# Docker
+docker-compose.override.yml
+
+# Environment files
+*.env
+
+# Secrets
+secrets.json
+appsettings.*.json
+!appsettings.json  # include base config, ignore others like appsettings.Development.json
+
+# OS generated files
+.DS_Store
+Thumbs.db

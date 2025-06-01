@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\denic\\home\\CryptoBot\\CryptoBot.csproj": {}
+    "C:\\Users\\DevMa\\Documents\\DSM\\Programación\\Repositories\\CryptoBot\\Cryptobot\\CryptoBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\denic\\home\\CryptoBot\\CryptoBot.csproj": {
+    "C:\\Users\\DevMa\\Documents\\DSM\\Programación\\Repositories\\CryptoBot\\Cryptobot\\CryptoBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\denic\\home\\CryptoBot\\CryptoBot.csproj",
+        "projectUniqueName": "C:\\Users\\DevMa\\Documents\\DSM\\Programación\\Repositories\\CryptoBot\\Cryptobot\\CryptoBot.csproj",
         "projectName": "CryptoBot",
-        "projectPath": "C:\\Users\\denic\\home\\CryptoBot\\CryptoBot.csproj",
-        "packagesPath": "C:\\Users\\denic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\denic\\home\\CryptoBot\\obj\\",
+        "projectPath": "C:\\Users\\DevMa\\Documents\\DSM\\Programación\\Repositories\\CryptoBot\\Cryptobot\\CryptoBot.csproj",
+        "packagesPath": "C:\\Users\\DevMa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DevMa\\Documents\\DSM\\Programación\\Repositories\\CryptoBot\\Cryptobot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\denic\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DevMa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
