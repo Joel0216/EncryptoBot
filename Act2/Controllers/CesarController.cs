@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
+using WebAPI.Services;
 
 namespace WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/cesar")]
     public class CesarController : ControllerBase
     {
         private readonly ICesarService _cesarService;
@@ -23,11 +24,10 @@ namespace WebAPI.Controllers
         public IActionResult Cifrar([FromBody] CesarRequest request)
         {
             if (request == null || string.IsNullOrWhiteSpace(request.Mensaje))
-                return BadRequest("El mensaje no puede estar vacío.");
+                return BadRequest("Mensaje vacío");
 
-            var textoCifrado = _cesarService.Cifrar(request.Mensaje, request.Desplazamiento);
-
-            return Ok(new { MensajeCifrado = textoCifrado });
+            var resultado = _cesarService.Cifrar(request.Mensaje, request.Desplazamiento);
+            return Ok(new { MensajeCifrado = resultado });
         }
     }
 }

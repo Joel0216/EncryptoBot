@@ -1,25 +1,24 @@
-public interface ICesarService
-{
-    string Cifrar(string texto, int desplazamiento);
-}
+using System.Linq;
 
-public class CesarService : ICesarService
+namespace WebAPI.Services
 {
-    public string Cifrar(string texto, int desplazamiento)
+    public class CesarService : ICesarService
     {
-        if (string.IsNullOrEmpty(texto)) return texto;
-
-        desplazamiento = desplazamiento % 26;
-
-        char CifrarCaracter(char c)
+        public string Cifrar(string texto, int desplazamiento)
         {
-            if (!char.IsLetter(c))
-                return c;
+            if (string.IsNullOrEmpty(texto)) return texto;
 
-            char offset = char.IsUpper(c) ? 'A' : 'a';
-            return (char)(((c + desplazamiento - offset) % 26) + offset);
+            desplazamiento %= 26;
+
+            char CifrarChar(char c)
+            {
+                if (!char.IsLetter(c)) return c;
+
+                char baseChar = char.IsUpper(c) ? 'A' : 'a';
+                return (char)(((c - baseChar + desplazamiento + 26) % 26) + baseChar);
+            }
+
+            return new string(texto.Select(CifrarChar).ToArray());
         }
-
-        return new string(texto.Select(CifrarCaracter).ToArray());
     }
 }
