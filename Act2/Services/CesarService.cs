@@ -1,36 +1,25 @@
-namespace WebAPI.Services
+public interface ICesarService
 {
-    public interface ICesarService
-    {
-        string Cifrar(string mensaje, int desplazamiento);
-    }
+    string Cifrar(string texto, int desplazamiento);
+}
 
-    public class CesarService : ICesarService
+public class CesarService : ICesarService
+{
+    public string Cifrar(string texto, int desplazamiento)
     {
-        public string Cifrar(string mensaje, int desplazamiento)
+        if (string.IsNullOrEmpty(texto)) return texto;
+
+        desplazamiento = desplazamiento % 26;
+
+        char CifrarCaracter(char c)
         {
-            if (string.IsNullOrEmpty(mensaje))
-                return string.Empty;
+            if (!char.IsLetter(c))
+                return c;
 
-            desplazamiento = desplazamiento % 26;
-            var resultado = new char[mensaje.Length];
-
-            for (int i = 0; i < mensaje.Length; i++)
-            {
-                char c = mensaje[i];
-
-                if (char.IsLetter(c))
-                {
-                    char baseLetra = char.IsUpper(c) ? 'A' : 'a';
-                    resultado[i] = (char)((((c - baseLetra) + desplazamiento + 26) % 26) + baseLetra);
-                }
-                else
-                {
-                    resultado[i] = c;
-                }
-            }
-
-            return new string(resultado);
+            char offset = char.IsUpper(c) ? 'A' : 'a';
+            return (char)(((c + desplazamiento - offset) % 26) + offset);
         }
+
+        return new string(texto.Select(CifrarCaracter).ToArray());
     }
 }

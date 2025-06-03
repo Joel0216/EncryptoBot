@@ -1,26 +1,22 @@
-using WebAPI.Services; // Asegúrate de que el namespace sea correcto
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar servicios al contenedor
 builder.Services.AddControllers();
-builder.Services.AddOpenApi();
+builder.Services.AddSwaggerGen();
 
-// 🔐 Registrar el servicio César
 builder.Services.AddScoped<ICesarService, CesarService>();
 
 var app = builder.Build();
 
-// Configurar el pipeline HTTP
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.MapOpenApi();
-}
-
-app.UseHttpsRedirection();
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API César v1");
+    c.RoutePrefix = "swagger";
+});
 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
