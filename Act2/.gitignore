@@ -1,0 +1,67 @@
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider
+.idea/
+
+## Visual Studio Code
+.vscode/
+.history/
+
+## ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json  # si manejas múltiples entornos, excluye config sensibles
+secrets.json
+
+## Logs
+*.log
+Logs/
+
+## dotCover
+*.dotCover
+
+## Resharper
+*.ReSharper
+*.DotSettings.user
+
+## Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+## NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Other
+*.DS_Store
+*.tgz
+*.gz
+*.tar
+*.zip
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## Local env
+.env
+.env.*
