@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fyw3/D0FT/8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DevMa\\Documents\\DSM\\Programación\\Repositories\\CryptoBot\\Act2\\Act2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DevMa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
+    "C:\\Users\\DevMa\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
